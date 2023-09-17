@@ -15,15 +15,19 @@ class ListItemWidget extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: 230,
-            bottom: -1,
+            left: 210,
+            bottom: 3,
             child: Container(
-              width: 150,
-              height: 50,
+              width: 143,
+              height: 70,
               decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(12),
+                    bottomLeft: Radius.circular(12)),
                 color: whiteColor,
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 35, top: 26),
                 child: Text.rich(
                   TextSpan(
                     children: [
@@ -87,7 +91,6 @@ class ListItemWidget extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 2,
                   child: Wrap(
